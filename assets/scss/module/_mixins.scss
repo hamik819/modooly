@@ -1,0 +1,93 @@
+@use "sass:math";
+
+@forward 'mixins/vw-conversion';
+@forward 'mixins/font';
+
+// @mixin blind() {
+// 	overflow: hidden;
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 1px;
+// 	height: 1px;
+// 	font-size: 0;
+// 	line-height: 0;
+// }
+
+// inline일 때 display: inline-block;
+// absolute도 사용 가능
+@mixin blind() {
+	overflow: hidden;
+	position: relative; 
+	border: 0;
+	z-index: -1;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+}
+
+@mixin flex-center($align: center) {
+	display: flex;
+	justify-content: center;
+	align-items: $align;
+}
+
+@mixin flex-between($align: center) {
+	display: flex;
+	justify-content: space-between;
+	align-items: $align;
+}
+
+// pos_left(50%) : left:50%
+@mixin pos_left($left: 0) {
+	position: absolute;
+	left: $left;
+	top: 50%;
+	transform: translate(-$left ,-50%);
+}
+
+@mixin pos_center($position: absolute) {
+	position: $position;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin pos_direct($left: 50%, $top: 50%) {
+	position: absolute;
+	left: $left;
+	top: $top;
+	transform: translate(-$left ,-$top);
+}
+
+@mixin clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin ellipsis($line: 1) {
+	@if ($line == 1) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	} @else {
+		display: -webkit-box;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $line;
+	}
+}
+
+$browser-context-pc: 16;
+$browser-context-mo: 14;
+@mixin em-font-size-pc($pixels, $context: $browser-context-pc) {
+	font-size: math.div($pixels, $context) * 1em;
+}
+@mixin em-font-size-mo($pixels, $context: $browser-context-mo) {
+	font-size: math.div($pixels, $context) * 1em;
+}
