@@ -1,0 +1,31 @@
+@charset "utf-8";
+@use './module/mixins' as *;
+@use './module/variables' as *;
+
+#container.page{
+    padding-top: 0;
+}
+.page{
+    &__header{
+        height: 68px;
+        border: 1px solid red;
+        position: relative;
+    }
+    .btn_back{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        background: url('../images/arrow_left.png') no-repeat center/100% auto;
+    }
+    &__title{
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 22px;
+    }  
+}
+.join{
+    padding: 0 20px;
+}

@@ -377,6 +377,58 @@ header .btn_join {
   background: url("../images/icon_inquire.png") no-repeat center/100% auto;
 }
 
+.box {
+  padding-top: 24px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.box label {
+  font-size: 14px;
+  color: #0C0C0C;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-right: 10px;
+  font-weight: 700;
+}
+.box input {
+  border: 1px solid #CECECE;
+  border-radius: 7px;
+  font-size: 14px;
+  padding: 11px 12px;
+  width: 100%;
+}
+.box input::placeholder {
+  color: #CECECE;
+}
+.box .btn_check {
+  width: 75px;
+  height: 42px;
+  background: #0C0C0C;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 14px;
+  flex: 0 0 auto;
+}
+.box .btn_check:disabled {
+  background-color: rgba(12, 12, 12, 0.3);
+}
+.box.check {
+  display: flex;
+  gap: 7px;
+}
+.box.required label:after {
+  content: "*";
+  color: #F366B4;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.box.password input {
+  padding-right: 48px;
+}
+
 .layer {
   position: fixed;
   left: 0;
@@ -850,4 +902,32 @@ header .btn_join {
   width: 8px;
   height: 8px;
   background: url("../images/icon_plus.png") no-repeat center/100% auto;
+}
+
+#container.page {
+  padding-top: 0;
+}
+
+.page__header {
+  height: 68px;
+  border: 1px solid red;
+  position: relative;
+}
+.page .btn_back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  background: url("../images/arrow_left.png") no-repeat center/100% auto;
+}
+.page__title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.join {
+  padding: 0 20px;
 }/*# sourceMappingURL=style.css.map */
