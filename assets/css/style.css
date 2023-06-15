@@ -491,12 +491,12 @@ header .btn_join {
 .main__info .main__head {
   margin-bottom: 6px;
 }
-.main__info--slide .slick-list {
-  padding-left: 6px;
-  padding-right: 10%;
-}
-.main__info--slide .slick-slide {
-  padding: 20px 6px;
+.main__info--slide {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .main__info .item {
   padding: 27px 14px 24px;
