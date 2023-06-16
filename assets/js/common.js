@@ -48,7 +48,7 @@ function interestSelect() {
 		if($(this).hasClass('is-selected')){
 			$(this).removeClass('is-selected');
 		} else {
-			if($('.is-selected').length <= 2){
+			if($('.is-selected').length < 3){
 				$(this).addClass('is-selected');
 			}
 		}
