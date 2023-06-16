@@ -38,10 +38,6 @@ body {
     line-height:1.4;
     -webkit-font-smoothing:antialiased;
     color:$black;
-    @include vw-font-size-pc(16);
-    @media (max-width: 768px){
-        @include vw-font-size-mo(14);
-    }
 }
 
 h1, h2, h3, h4, h5{

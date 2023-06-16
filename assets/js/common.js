@@ -43,8 +43,22 @@ function bannerSlide() {
 // 		arrows: false,
 // 	});
 // }
+function interestSelect() {
+	$(document).on('click', '.interest__choice button', function(){
+		if($(this).hasClass('is-selected')){
+			$(this).removeClass('is-selected');
+		} else {
+			if($('.is-selected').length <= 2){
+				$(this).addClass('is-selected');
+			}
+		}
+	});
+}
 $(document).ready(function() {
 	if( $('.main').length > 0 ) {
 		bannerSlide();
+	}
+	if( $('.interest').length > 0 ) {
+		interestSelect();
 	}
 });
