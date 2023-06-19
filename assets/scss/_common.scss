@@ -64,6 +64,9 @@ header{
         background: url('../images/icon_join.png') no-repeat center/100% auto;
     }
 }
+section{
+    padding: 0 20px;
+}
 .category{
     padding: 5px 8px;
     border: 1px solid #000;
@@ -153,7 +156,7 @@ header{
         &:disabled{
             background-color: rgba(12, 12, 12, 0.3);
         }
-        &.complete{
+        &.success{
             padding-left: 20px;
             position: relative;
             &:before{
@@ -253,7 +256,8 @@ header{
     }
 }
 .radio_btn,
-.checkbox_btn{
+.checkbox_btn,
+.checkbox_agree{
     position:relative;
     input{
         position:absolute;
@@ -269,8 +273,8 @@ header{
     margin-top: 5px;
     label{
         color: #5B5B5B;
-        position:relative;
-        cursor:pointer;
+        position: relative;
+        cursor: pointer;
         padding-left: 23px;
         font-size: 14px;
         &:before{
@@ -289,6 +293,32 @@ header{
     input:checked + label{
         &:before{
             background: url('../images/checkbox_checked.png') no-repeat center/100% auto;
+        }
+    }
+}
+.checkbox_agree{
+    label{
+        color: #0C0C0C;
+        position: relative;
+        cursor: pointer;
+        padding-left: 34px;
+        font-size: 15px;
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -2px;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% auto;
+            background-image: url('../images/agree_checkbox.png');
+        }
+    }
+    input:checked + label{
+        &:before{
+            background: url('../images/agree_checkbox_checked.png');
         }
     }
 }
@@ -345,7 +375,4 @@ header{
             }
         }
     }
-}
-@media (max-width:768px){
-    
 }

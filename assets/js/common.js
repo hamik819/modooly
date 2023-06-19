@@ -54,7 +54,17 @@ function interestSelect() {
 		}
 	});
 }
+function passwordShow() {
+	$(document).on('click', '.box.pwd .btn_password', function(){
+		if($(this).hasClass('show')){
+			$(this).removeClass('show').siblings('input').attr('type', 'password');
+		} else {
+			$(this).addClass('show').siblings('input').attr('type', 'text');
+		}
+	});
+}
 $(document).ready(function() {
+	passwordShow();
 	if( $('.main').length > 0 ) {
 		bannerSlide();
 	}

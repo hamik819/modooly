@@ -319,6 +319,10 @@ header .btn_join {
   background: url("../images/icon_join.png") no-repeat center/100% auto;
 }
 
+section {
+  padding: 0 20px;
+}
+
 .category {
   padding: 5px 8px;
   border: 1px solid #000;
@@ -409,11 +413,11 @@ header .btn_join {
 .box .btn_check:disabled {
   background-color: rgba(12, 12, 12, 0.3);
 }
-.box .btn_check.complete {
+.box .btn_check.success {
   padding-left: 20px;
   position: relative;
 }
-.box .btn_check.complete:before {
+.box .btn_check.success:before {
   content: "";
   width: 15px;
   height: 13px;
@@ -499,11 +503,13 @@ header .btn_join {
 }
 
 .radio_btn,
-.checkbox_btn {
+.checkbox_btn,
+.checkbox_agree {
   position: relative;
 }
 .radio_btn input,
-.checkbox_btn input {
+.checkbox_btn input,
+.checkbox_agree input {
   position: absolute;
   left: 0;
   top: 0;
@@ -537,6 +543,29 @@ header .btn_join {
 }
 .checkbox_btn input:checked + label:before {
   background: url("../images/checkbox_checked.png") no-repeat center/100% auto;
+}
+
+.checkbox_agree label {
+  color: #0C0C0C;
+  position: relative;
+  cursor: pointer;
+  padding-left: 34px;
+  font-size: 15px;
+}
+.checkbox_agree label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  background-image: url("../images/agree_checkbox.png");
+}
+.checkbox_agree input:checked + label:before {
+  background: url("../images/agree_checkbox_checked.png");
 }
 
 .layer {
@@ -1047,10 +1076,6 @@ header .btn_join {
   font-weight: 700;
 }
 
-.join, .login, .password {
-  padding: 0 20px;
-}
-
 .interest {
   padding: 50px 20px 0;
 }
@@ -1172,4 +1197,135 @@ header .btn_join {
 
 .password .btn_pink {
   margin-top: 36px;
+}
+
+.agree__box {
+  margin: 20px 0 30px;
+  padding: 16px 14px;
+  background: rgba(231, 231, 231, 0.4);
+  border-radius: 7px;
+}
+.agree__box label {
+  font-weight: 700;
+}
+.agree__list {
+  padding: 0 14px 50px;
+}
+.agree__list--onecheck {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.agree__list .btn_view {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  color: #939393;
+  text-decoration-line: underline;
+}
+
+.mypage__profile {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.mypage__profile .image {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mypage__profile .image img {
+  object-fit: cover;
+}
+.mypage__profile p {
+  color: #0C0C0C;
+  font-weight: 700;
+  font-size: 17px;
+}
+.mypage__list {
+  margin: 54px 0 0;
+}
+.mypage__list a {
+  display: block;
+  padding: 12px 30px;
+  margin-bottom: 12px;
+  color: #0C0C0C;
+  font-size: 17px;
+  position: relative;
+}
+.mypage__list a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+.mypage__list a:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url("../images/arrow_right.png") no-repeat center/100% auto;
+}
+.mypage__list--info:before {
+  background-image: url("../images/icon_info.png");
+}
+.mypage__list--activity:before {
+  background-image: url("../images/icon_activity.png");
+}
+.mypage__list--agreement:before {
+  background-image: url("../images/icon_agreement.png");
+}
+.mypage__version {
+  margin: 36px 0 180px;
+}
+.mypage__version > p {
+  padding: 12px 0;
+  border-bottom: 1px solid #595959;
+  color: #0C0C0C;
+  font-size: 17px;
+}
+.mypage__version div {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.mypage__version div span {
+  color: #F366B4;
+}
+.mypage__logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.mypage__logout .btn {
+  display: block;
+  font-size: 15px;
+  color: #5B5B5B;
+}
+.mypage__logout .btn:nth-of-type(1) {
+  position: relative;
+}
+.mypage__logout .btn:nth-of-type(1):after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 10px;
+  background-color: #939393;
 }/*# sourceMappingURL=style.css.map */
