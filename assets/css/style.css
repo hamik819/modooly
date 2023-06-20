@@ -870,6 +870,9 @@ section {
 .main__project .owner img {
   width: 32px;
   height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .main__project .owner p {
   font-weight: 700;
@@ -882,6 +885,9 @@ section {
   width: 26px;
   height: 26px;
   margin-left: -4px;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .main__project .person img:nth-of-type(1) {
   z-index: 4;
