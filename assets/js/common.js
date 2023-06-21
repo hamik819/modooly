@@ -1,3 +1,4 @@
+// 메인배너슬라이드
 function bannerSlide() {
 	var slickElement = $('.main__banner--slide');
 	var pageCurrent = $('.main__banner .current');
@@ -43,6 +44,8 @@ function bannerSlide() {
 // 		arrows: false,
 // 	});
 // }
+
+// 관심분야선택
 function interestSelect() {
 	$(document).on('click', '.interest__choice button', function(){
 		if($(this).hasClass('is-selected')){
@@ -54,12 +57,23 @@ function interestSelect() {
 		}
 	});
 }
+// 패스워드타입변경
 function passwordShow() {
 	$(document).on('click', '.box.pwd .btn_password', function(){
 		if($(this).hasClass('show')){
 			$(this).removeClass('show').siblings('input').attr('type', 'password');
 		} else {
 			$(this).addClass('show').siblings('input').attr('type', 'text');
+		}
+	});
+}
+// 활동내역 문의 답변보기
+function answerShow() {
+	$(document).on('click', '.mypage__inquire--list .btn_answer_view', function(){
+		if($(this).parents('.item').hasClass('show')){
+			$(this).parents('.item').removeClass('show');
+		} else {
+			$(this).parents('.item').addClass('show');
 		}
 	});
 }
@@ -70,5 +84,8 @@ $(document).ready(function() {
 	}
 	if( $('.interest').length > 0 ) {
 		interestSelect();
+	}
+	if( $('.mypage__inquire').length > 0 ) {
+		answerShow();
 	}
 });

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <!-- <meta name="og:title" content=""/>
+    <meta name="og:type" content="website"/>
+    <meta name="og:description" content=""/>
+    <meta name="og:image" content=""/>
+    <meta name="og:url" content=""/> -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"/> -->
+    <title>Document</title>
+</head>
+<body>
+<div id="wrapper">
+    <div id="container" class="page">
+        <div class="page__header with_title">
+            <button type="button" class="btn_back"></button>
+            <h1 class="page__header--title">내 정보 수정</h1>
+        </div>
+        <section class="mypage__modify">
+            <form>
+                <div class="mypage__modify--profile">
+                    <button type="button">
+                        <div class="image">
+                            <img src="assets/images/profile2.png" alt="">
+                        </div>
+                    </button>
+                    <p>활동명</p>
+                </div>
+                <div class="box required">
+                    <label for="">이메일</label>
+                    <input type="text" placeholder="pky2032@naver.com" disabled>
+                </div>
+                <div class="box pwd required">
+                    <label for="">비밀번호</label>
+                    <input type="password" placeholder="비밀번호">
+                    <button type="button" class="btn_password"></button>
+                    <p class="message">영어+숫자+특수문자  6 ~ 20자리</p>
+                </div>
+                <div class="box pwd required">
+                    <label for="">비밀번호 확인</label>
+                    <input type="password" placeholder="비밀번호">
+                    <button type="button" class="btn_password show"></button>
+                    <p class="message">비밀번호가 일치하지 않습니다.</p>
+                </div>
+                <div class="box required">
+                    <label for="">회원구분</label>
+                    <div class="btn_wrap">
+                        <button type="button" disabled>개인회원</button>
+                    </div>
+                </div>
+                <div class="box check required">
+                    <label for="">활동명</label>
+                    <div class="check_wrap">
+                        <input type="text" placeholder="활동명" disabled>
+                        <button type="button" class="btn_check">수정</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <label for="">연락처</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="box">
+                    <label for="">나이</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="box required">
+                    <label for="">성별</label>
+                    <div class="btn_wrap">
+                        <button type="button">남</button>
+                        <button type="button" class="is-seleted">여</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <label for="">활동지역</label>
+                </div>
+                <div class="box interesting">
+                    <p class="title">관심분야</p>
+                    <!-- <div class="interesting__box">
+                        <p class="interesting__title">설정하신 관심 분야가 없습니다.</p>
+                        <p class="interesting__desc">관심분야를 설정하고 관심 분야에 맞는<br />게시물을 상단에서 모아 보기</p>
+                    </div> -->
+                    <div class="interesting__box">
+                        <ul>
+                            <li>
+                                <div class="image">
+                                    <img src="assets/images/world.png" alt="">
+                                </div>
+                                <p>세계</p>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <img src="assets/images/neighbor.png" alt="">
+                                </div>
+                                <p>이웃</p>
+                            </li>
+                            <li>
+                                <div class="image">
+                                    <img src="assets/images/animal.png" alt="">
+                                </div>
+                                <p>동물</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn_choice">관심분야 선택</button>
+                </div>
+                
+                <button type="submit" class="btn_pink">저장</button>
+            </form>
+        </section>
+    </div>
+</div>
+<script type="text/javascript" src="assets/js/lib/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="assets/js/lib/slick.js"></script>
+<script type="text/javascript" src="assets/js/common.js"></script>
+</body>
+</html>
