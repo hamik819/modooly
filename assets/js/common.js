@@ -77,6 +77,49 @@ function answerShow() {
 		}
 	});
 }
+// select
+function select() {
+	$(document).on('click','.select_box .select_btn', function(){
+		if($(this).parents('.select_box').hasClass('is-active')){
+			$(this).parents('.select_box').removeClass('is-active');
+			$('.select_box').removeClass('is-active');
+		} else {
+			$(this).parents('.select_box').addClass('is-active');
+		}
+	});
+	$(document).on('click', '.select_box .item', function(){
+		var text = $(this).text();
+		var selectBox = $(this).closest('.select_box');
+		var selectInput = selectBox.children('input[type=hidden]');
+		var selectBtn = selectBox.children('.select_btn');
+		selectInput.val(text).trigger('change');
+		selectBtn.text(text);
+		selectBox.removeClass('is-active');
+	});
+	$(document).on('click', function(e){
+		var target = $(e.target);
+		if( !target.hasClass('select_box') && !target.parents().hasClass('select_box') ) {
+			$('.select_box').removeClass('is-active');
+		}
+	});
+}
+// 팝업 열기
+function layerOpen(target) {
+	var el = $(target);
+	el.removeClass('is-hidden').addClass('is-open');
+	$('body').addClass('layer-opens');
+}
+// 팝업 닫기
+function layerClose(target) {
+	var el = $(target);
+	el.removeClass('is-open').addClass('is-hidden');
+	$('body').removeClass('layer-opens');
+	if( el.find('.select_box').length > 0 ) {
+		var initialMessage = el.find('.select_box').children('.select_btn').data('initial');
+		el.find('.select_box').removeClass('is-open').children('input').val('');
+		el.find('.select_box').children('.select_btn').text(initialMessage);
+	}
+}
 $(document).ready(function() {
 	passwordShow();
 	if( $('.main').length > 0 ) {
@@ -87,5 +130,8 @@ $(document).ready(function() {
 	}
 	if( $('.mypage__inquire').length > 0 ) {
 		answerShow();
+	}
+	if( $('.select_box').length > 0 ) {
+		select();
 	}
 });
