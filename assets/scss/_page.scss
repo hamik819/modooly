@@ -673,3 +673,18 @@
         padding: 0;
     }
 }
+.notice{
+    .select_box.small{
+        width: 110px;
+    }
+    .main__notice--list{
+        padding: 0;
+        li{
+            &:nth-of-type(1){
+                a{
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}

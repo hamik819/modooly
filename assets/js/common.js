@@ -46,12 +46,12 @@ function bannerSlide() {
 // }
 
 // 관심분야선택
-function interestSelect() {
+function interestSelect(num) {
 	$(document).on('click', '.interest__choice button', function(){
 		if($(this).hasClass('is-selected')){
 			$(this).removeClass('is-selected');
 		} else {
-			if($('.interest__choice button.is-selected').length < 3){
+			if($('.interest__choice button.is-selected').length < num){
 				$(this).addClass('is-selected');
 			}
 		}
@@ -77,14 +77,24 @@ function answerShow() {
 		}
 	});
 }
+// 뷰단 응원하기 버튼
+function viewPageLike() {
+	$(document).on('click', '.detail__head--info2 .like', function(){
+		if($(this).hasClass('is-active')){
+			$(this).removeClass('is-active');
+		} else {
+			$(this).addClass('is-active');
+		}
+	});
+}
 // select
 function select() {
 	$(document).on('click','.select_box .select_btn', function(){
-		if($(this).parents('.select_box').hasClass('is-active')){
-			$(this).parents('.select_box').removeClass('is-active');
-			$('.select_box').removeClass('is-active');
+		if($(this).parent('.select_box').hasClass('is-active')){
+			$(this).parent('.select_box').removeClass('is-active');
+			// $('.select_box').removeClass('is-active');
 		} else {
-			$(this).parents('.select_box').addClass('is-active');
+			$(this).parent('.select_box').addClass('is-active');
 		}
 	});
 	$(document).on('click', '.select_box .item', function(){
@@ -126,12 +136,18 @@ $(document).ready(function() {
 		bannerSlide();
 	}
 	if( $('.interest').length > 0 ) {
-		interestSelect();
+		interestSelect(3);
 	}
 	if( $('.mypage__inquire').length > 0 ) {
 		answerShow();
 	}
 	if( $('.select_box').length > 0 ) {
 		select();
+	}
+	if( $('.detail__head--info2').length > 0 ) {
+		viewPageLike();
+	}
+	if( $('.layer_category').length > 0 ) {
+		interestSelect(1);
 	}
 });

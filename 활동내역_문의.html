@@ -26,7 +26,7 @@
             <button type="button" class="is-selected">문의</button>
         </div>
         <section class="mypage__inquire">
-            <div class="mypage__inquire--head">
+            <div class="mypage__inquire--head"> 
                 <form>
                     <p>전체보기</p>
                     <button type="button" class="btn_pink" onclick="layerOpen('.layer_inquire')">1:1문의하기</button>
@@ -97,7 +97,8 @@
             </div>
         </section>
     </div>
-    <div class="layer layer_inquire is-hidden">
+    <!-- 팝업 -->
+    <div class="layer layer_inquire is-open">
         <div class="inner">
             <div class="head">
                 <p class="title">1:1 문의</p>
@@ -106,7 +107,7 @@
             <form>
                 <div class="select_box">
                     <input type="hidden" />
-                    <!-- select가 팝업에서 쓰일 땐 data-initial을 넣어주세요. -->
+                    <!-- select가 팝업에서 쓰일 땐 data-initial을 넣어주세요. --> 
                     <button type="button" class="select_btn" data-initial="문의유형을 선택해주세요">문의유형을 선택해주세요</button>
                     <div class="list_wrap">
                         <span>문의유형을 선택해주세요</span>
@@ -134,6 +135,18 @@
                 </div>
                 <input type="text" class="inquire_title" placeholder="제목을 30자 이내로 작성해주세요.">
                 <textarea class="inquire_content" placeholder="내용을 200자 이내로 작성해주세요:)"></textarea>
+                <div class="file__box">
+                    <p class="file__title">사진첨부<span>(0/3)</span></p>
+                    <div class="file__list">
+                        <input type="file" name="" id="input_file" hidden>
+                        <label for="input_file">첨부하기</label>
+                        <div class="image">
+                            <img src="assets/images/category_culture.png " alt="">
+                        </div>
+                        <div class="image"></div>
+                        <div class="image"></div>
+                    </div>
+                </div>
                 <button type="submit" class="btn_black">접수하기</button>
             </form>
         </div>

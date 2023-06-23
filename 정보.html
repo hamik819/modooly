@@ -14,56 +14,239 @@
     <title>Document</title>
 </head>
 <body>
-<div id="wrapper">
+<div id="wrapper" class="layer-opens">
     <div id="container" class="page">
-        <div class="page__header">
-            <button type="button" class="btn_back"></button>
+        <div class="page__header with_title">
+            <h1 class="page__header--title">모두리 정보</h1>
         </div>
-        <div class="information">
-            <div class="detail__head">
-                <div class="detail__head--info1">
-                    <span class="category">카테고리</span>
-                    <h1 class="title">문턱 넘기 많이 힘드셨죠?</h1>
-                    <div class="info1">
-                        <p class="name">모두리 이장</p>
-                        <p class="date">2023.05.26</p>
+        <section class="information">
+            <form>
+                <div class="search">
+                    <input type="text" placeholder="검색어를 입력해주세요">
+                    <button type="button" class="btn_search">검색</button>
+                </div>
+                <div class="box">
+                    <p class="title">카테고리 선택</p>
+                    <div class="category__choice">
+                        <button type="button" class="category__choice--btn" onclick="layerOpen('.layer_category');">전체</button>
                     </div>
                 </div>
-                <div class="detail__head--info2">
-                    <a href="" class="like is-active">
-                        <p>응원하기</p>
-                        <span>1000</span>
+                <div class="select_box small">
+                    <input type="hidden"  />
+                    <button type="button" class="select_btn">최신등록순</button>
+                    <div class="list_wrap">
+                        <span>최신등록순</span>
+                        <ul class="list">
+                            <li>
+                                <button type="button" class="item">최신등록순</button>
+                            </li>
+                            <li>
+                                <button type="button" class="item">종료일순</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+            <div class="main__info">
+                <div class="main__info--slide">
+                    <a class="item" href="">
+                        <span class="category">카테고리</span>
+                        <p class="title">문턱 넘기 많이 힘드셨죠?1</p>
+                        <p class="desc">저소득층 및 취약계층을 위해 무상으로 문턱제거를 해드립니다. 신청기간은 2023년 05월 31일</p>
+                        <div class="info1">
+                            <p class="name">모두리 이장</p>
+                            <p class="date">2023.05.26</p>
+                        </div>
+                        <div class="info2">
+                            <div class="info3">
+                                <p class="comment">54</p>
+                                <p class="share">21</p>
+                            </div>
+                            <!-- 좋아요 한 정보는 .is-seleted -->
+                            <p class="like is-seleted">128</p>
+                        </div>
                     </a>
-                    <a href="" class="comment">
-                        <p>댓글</p>
-                        <span>1000</span>
+                    <a class="item" href="">
+                        <span class="category">카테고리</span>
+                        <p class="title">문턱 넘기 많이 힘드셨죠?2</p>
+                        <p class="desc">저소득층 및 취약계층을 위해 무상으로 문턱제거를 해드립니다. 신청기간은 2023년 05월 31일</p>
+                        <div class="info1">
+                            <p class="name">모두리 이장</p>
+                            <p class="date">2023.05.26</p>
+                        </div>
+                        <div class="info2">
+                            <div class="info3">
+                                <p class="comment">54</p>
+                                <p class="share">21</p>
+                            </div>
+                            <!-- 좋아요 한 정보는 .is-seleted -->
+                            <p class="like is-seleted">128</p>
+                        </div>
                     </a>
-                    <button type="button" class="share">
-                        <p>공유</p>
-                        <span>1000</span>
-                    </button>
+                    <a class="item" href="">
+                        <span class="category">카테고리</span>
+                        <p class="title">문턱 넘기 많이 힘드셨죠?3</p>
+                        <p class="desc">저소득층 및 취약계층을 위해 무상으로 문턱제거를 해드립니다. 신청기간은 2023년 05월 31일</p>
+                        <div class="info1">
+                            <p class="name">모두리 이장</p>
+                            <p class="date">2023.05.26</p>
+                        </div>
+                        <div class="info2">
+                            <div class="info3">
+                                <p class="comment">54</p>
+                                <p class="share">21</p>
+                            </div>
+                            <!-- 좋아요 한 정보는 .is-seleted -->
+                            <p class="like is-seleted">128</p>
+                        </div>
+                    </a>
+                    <a class="item" href="">
+                        <span class="category">카테고리</span>
+                        <p class="title">문턱 넘기 많이 힘드셨죠?3</p>
+                        <p class="desc">저소득층 및 취약계층을 위해 무상으로 문턱제거를 해드립니다. 신청기간은 2023년 05월 31일</p>
+                        <div class="info1">
+                            <p class="name">모두리 이장</p>
+                            <p class="date">2023.05.26</p>
+                        </div>
+                        <div class="info2">
+                            <div class="info3">
+                                <p class="comment">54</p>
+                                <p class="share">21</p>
+                            </div>
+                            <!-- 좋아요 한 정보는 .is-seleted -->
+                            <p class="like is-seleted">128</p>
+                        </div>
+                    </a>
+                    <a class="item" href="">
+                        <span class="category">카테고리</span>
+                        <p class="title">문턱 넘기 많이 힘드셨죠?3</p>
+                        <p class="desc">저소득층 및 취약계층을 위해 무상으로 문턱제거를 해드립니다. 신청기간은 2023년 05월 31일</p>
+                        <div class="info1">
+                            <p class="name">모두리 이장</p>
+                            <p class="date">2023.05.26</p>
+                        </div>
+                        <div class="info2">
+                            <div class="info3">
+                                <p class="comment">54</p>
+                                <p class="share">21</p>
+                            </div>
+                            <!-- 좋아요 한 정보는 .is-seleted -->
+                            <p class="like is-seleted">128</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <section class="detail__content">
-                <div class="item">
-                    <p class="detail__content--title">정보소개</p>
-                    <p class="detail__content--desc">저소득층 및 취약계증을 위해 무상으로 문턱제거를 해드립니다. 신청기간은 2023년 5월 31일부터 한 달 간 진행이 되며 선착순 50 가정의 방문 문턱을 제거 해드리며 필요한 경우 도어락을 디지털 리모컨 형으로 교체 해드릴 예정이며 시공상의 문제가 있을 경우 1년 이내 무상으로 사후처리를 해드리는 계획이 있습니다. 단 장애등급과 소득 수준에 따라 지원되는 부분이 있으니 이점 양해를 부탁드리고 추후 진행이 될 지원사업에 우선 신청을 하실 수 있는 기회를 드리고자 하오니 많은 지원을 바랍니다.</p>
+        </section>
+    </div>
+    <div class="layer layer_category is-hidden">
+        <div class="inner">
+            <form>
+                <div class="interest__choice">
+                    <div class="wrap">
+                        <button type="button" class="all">
+                            <div class="image"></div>
+                            <p>전체</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="health">
+                            <div class="image">
+                                <img src="assets/images/category_health.png" alt="">
+                            </div>
+                            <p>건강</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="education">
+                            <div class="image">
+                                <img src="assets/images/category_education.png" alt="">
+                            </div>
+                            <p>교육</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="culture">
+                            <div class="image">
+                                <img src="assets/images/category_culture.png" alt="">
+                            </div>
+                            <p>문화</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="society">
+                            <div class="image">
+                                <img src="assets/images/category_society.png" alt="">
+                            </div>
+                            <p>사회</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="life">
+                            <div class="image">
+                                <img src="assets/images/category_life.png" alt="">
+                            </div>
+                            <p>생활</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="travel">
+                            <div class="image">
+                                <img src="assets/images/category_travel.png" alt="">
+                            </div>
+                            <p>여행</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="food">
+                            <div class="image">
+                                <img src="assets/images/category_food.png" alt="">
+                            </div>
+                            <p>외식</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="medical">
+                            <div class="image">
+                                <img src="assets/images/category_medical.png" alt="">
+                            </div>
+                            <p>의료</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="work">
+                            <div class="image">
+                                <img src="assets/images/category_work.png" alt="">
+                            </div>
+                            <p>일자리</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="product">
+                            <div class="image">
+                                <img src="assets/images/category_product.png" alt="">
+                            </div>
+                            <p>제품</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="living">
+                            <div class="image">
+                                <img src="assets/images/category_living.png" alt="">
+                            </div>
+                            <p>주거</p>
+                        </button>
+                    </div>
+                    <div class="wrap">
+                        <button type="button" class="etc">
+                            <div class="image">
+                                <img src="assets/images/category_etc.png" alt="">
+                            </div>
+                            <p>기타</p>
+                        </button>
+                    </div>
                 </div>
-                <div class="item">
-                    <p class="detail__content--title">지역/장소</p>
-                    <p class="detail__content--desc">서울/전체</p>
-                </div>
-                <div class="item">
-                    <p class="detail__content--title">관련 이미지</p>
-                    <ul class="detail__content--image">
-                        <li>
-                            <a href="">
-                                <img src="assets/images/project1.png" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                <button type="submit" class="btn_pink">확인</button>
+            </form>
         </div>
     </div>
 </div>

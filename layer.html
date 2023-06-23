@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <!-- <meta name="og:title" content=""/>
+    <meta name="og:type" content="website"/>
+    <meta name="og:description" content=""/>
+    <meta name="og:image" content=""/>
+    <meta name="og:url" content=""/> -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"/> -->
+    <title>Document</title>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="모두리 로고"></a>
+        <!-- 마이페이지로 이동 시 .btn_mypage, 회원가입 페이지로 이동 시 .btn_join -->
+        <a href="" class="btn_mypage"></a>
+    </header>
+    
+    <div id="container" style="height:400px;display:flex;align-items:center;">
+        <button type="button" class="btn_black" style="width:100px;margin:0 auto;" onclick="layerOpen('.layer_ask1');">레이어 팝업</button>
+    </div>
+
+    <!-- 
+        팝업 만드실 땐 .layer 기본으로 붙여 주고,
+        가운데 클래스는 팝업에 따라 유일한 클래스로 넣고 커스텀 하시면 됩니다.
+        .is-hidden은 팝업이 안보이는 거고, .is-open은 팝업이 나오는 클래스
+        팝업 호출하실 땐 common.js 참고 하셔서 target으로 가운데 유일한 클래스 넣으시면 돼요.
+        <div class="layer layer_ask1 is-hidden">
+            <div class="inner">
+                <div class="head">
+                    <button type="button" class="btn_close" aria-label="닫기" onclick="layerClose('.layer_ask1')"></button>
+                </div>
+                <div class="content">
+                    
+                </div>
+            </div>
+        </div>
+    -->
+
+
+    <!-- 기본 팝업에 버튼은 하나 또는 두개 넣으시면 됩니다. -->
+    <div class="layer layer_ask1 is-hidden">
+        <div class="inner">
+            <div class="head">
+                <button type="button" class="btn_close" aria-label="닫기" onclick="layerClose('.layer_ask1')"></button>
+            </div>
+            <div class="content">
+                <p class="title">참여 인증하기를<br />취소하시겠습니까?</p>
+                <div class="btn_group">
+                    <button type="button" class="button btn_white">아니요</button>
+                    <button type="button" class="button btn_black">네</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="layer layer_ask2 is-hidden">
+        <div class="inner">
+            <div class="head">
+                <button type="button" class="btn_close" aria-label="닫기" onclick="layerClose('.layer_ask2')"></button>
+            </div>
+            <div class="content">
+                <p class="title">삭제하면 다시 복수할 수 없습니다.<br />정말 삭제하시겠습니까?</p>
+                <div class="btn_group">
+                    <button type="button" class="button btn_black">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="assets/js/lib/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="assets/js/lib/slick.js"></script>
+<script type="text/javascript" src="assets/js/common.js"></script>
+</body>
+</html>
