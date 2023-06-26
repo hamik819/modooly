@@ -127,22 +127,22 @@
                         <span>문의유형을 선택해주세요</span>
                         <ul class="list">
                             <li>
-                                <button type="button" class="item">서비스</button>
+                                <button type="button" class="item" data-value="1">서비스</button>
                             </li>
                             <li>
-                                <button type="button" class="item">이벤트</button>
+                                <button type="button" class="item" data-value="2">이벤트</button>
                             </li>
                             <li>
-                                <button type="button" class="item">프로젝트</button>
+                                <button type="button" class="item" data-value="3">프로젝트</button>
                             </li>
                             <li>
-                                <button type="button" class="item">계정관리</button>
+                                <button type="button" class="item" data-value="4">계정관리</button>
                             </li>
                             <li>
-                                <button type="button" class="item">신고</button>
+                                <button type="button" class="item" data-value="5">신고</button>
                             </li>
                             <li>
-                                <button type="button" class="item">기타</button>
+                                <button type="button" class="item" data-value="6">기타</button>
                             </li>
                         </ul>
                     </div>
@@ -165,12 +165,14 @@
             </form>
         </div>
     </div>
-    <div class="layer layer_slide is-hidden">
+    <div class="layer layer_mypage_image is-hidden">
         <div class="inner">
             <div class="head">
-                <button type="button" class="btn_close" aria-label="닫기" onclick="layerClose('.layer_inquire')"></button>
+                <button type="button" class="btn_close" aria-label="닫기" onclick="layerClose('.layer_mypage_image');"></button>
             </div>
-            <div class="slide"></div>
+            <div class="image">
+                <img src="" alt="">
+            </div>
         </div>
     </div>
 </div>

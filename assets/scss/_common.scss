@@ -331,7 +331,9 @@ section{
 }
 .radio_btn,
 .checkbox_btn,
-.checkbox_agree{
+.checkbox_agree,
+.checkbox_notice,
+.checkbox_notice_large{
     position:relative;
     input{
         position:absolute;
@@ -393,6 +395,63 @@ section{
     input:checked + label{
         &:before{
             background: url('../images/agree_checkbox_checked.png');
+        }
+    }
+}
+.checkbox_notice{
+    label{
+        color: #5B5B5B;
+        position: relative;
+        cursor: pointer;
+        font-size: 14px;
+        display: block;
+        font-weight: 500;
+        &:before{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -2px;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% auto;
+            background-image: url('../images/agree_checkbox.png');
+        }
+    }
+    input:checked + label{
+        &:before{
+            background: url('../images/agree_checkbox_checked.png');
+        }
+    }
+}
+.checkbox_notice_large{
+    padding: 25px 20px;
+    label{
+        color: #0C0C0C;
+        position: relative;
+        cursor: pointer;
+        height: 33px;
+        display: block;
+        font-weight: 500;
+        line-height: 33px;
+        font-weight: 700;
+        &:before{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -2px;
+            width: 52px;
+            height: 33px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% auto;
+            background-image: url('../images/checkbox_large.png');
+        }
+    }
+    input:checked + label{
+        &:before{
+            background: url('../images/checkbox_large_checked.png');
         }
     }
 }
@@ -855,30 +914,6 @@ section{
                 }
             }
         }
-        .inquire{
-            &_title{
-                width: 100%;
-                padding: 14px;
-                color: #5B5B5B;
-                font-size: 14px;
-                border-radius: 12px;
-                background: #F8F8F8;
-                border: none;
-                margin: 12px 0 16px;
-            }
-            &_content{
-                width: 100%;
-                height: 138px;
-                padding: 14px;
-                color: #5B5B5B;
-                font-size: 14px;
-                border-radius: 12px;
-                background: #F8F8F8;
-                border: none;
-                resize: none;
-                margin-bottom: 10px;
-            }
-        }
     }
     &_category{
         .inner{
@@ -903,6 +938,74 @@ section{
         }
         .btn_pink{
             border-radius: 0 0 18px 18px;
+        }
+    }
+    &_mypage_image{
+        .inner{
+            padding-bottom: 50px;
+        }
+        .image{
+            border-radius: 12px;
+            height: 80vw;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .count{
+            display: flex;
+            gap: 5px;
+            color: #939393;
+        }
+        .current{
+            color: #5B5B5B;
+        }
+        .total{
+            color: #939393;
+        }
+        .btn{
+            width: 17px;
+            height: 17px;
+            background: url('../images/btn_slide.png') no-repeat center/100% auto;
+            &_group{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            &_prev{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .inquire{
+        &_title{
+            width: 100%;
+            padding: 14px;
+            color: #5B5B5B;
+            font-size: 14px;
+            border-radius: 12px;
+            background: #F8F8F8;
+            border: none;
+            margin: 12px 0 16px;
+        }
+        &_content{
+            width: 100%;
+            height: 138px;
+            padding: 14px;
+            color: #5B5B5B;
+            font-size: 14px;
+            border-radius: 12px;
+            background: #F8F8F8;
+            border: none;
+            resize: none;
+            margin-bottom: 10px;
+            &.basic{
+                height: 238px;
+                margin-bottom: 22px;
+            }
         }
     }
 } 

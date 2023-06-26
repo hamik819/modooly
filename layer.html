@@ -15,14 +15,10 @@
 </head>
 <body>
 <div id="wrapper">
-    <header>
-        <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="모두리 로고"></a>
-        <!-- 마이페이지로 이동 시 .btn_mypage, 회원가입 페이지로 이동 시 .btn_join -->
-        <a href="" class="btn_mypage"></a>
-    </header>
-    
-    <div id="container" style="height:400px;display:flex;align-items:center;">
+    <div id="container" style="display:flex;flex-direction:column;gap:20px;">
         <button type="button" class="btn_black" style="width:100px;margin:0 auto;" onclick="layerOpen('.layer_ask1');">레이어 팝업</button>
+        <button type="button" class="btn_black" style="width:100px;margin:0 auto;" onclick="layerOpen('.layer_report');">신고하기</button>
+        <button type="button" class="btn_black" style="width:100px;margin:0 auto;" onclick="layerOpen('.layer_modify');">댓글수정</button>
     </div>
 
     <!-- 
@@ -51,10 +47,12 @@
             </div>
             <div class="content">
                 <p class="title">참여 인증하기를<br />취소하시겠습니까?</p>
-                <div class="btn_group">
-                    <button type="button" class="button btn_white">아니요</button>
-                    <button type="button" class="button btn_black">네</button>
-                </div>
+                <form action="">
+                    <div class="btn_group">
+                        <button type="button" class="button btn_white">아니요</button>
+                        <button type="button" class="button btn_black">네</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -66,10 +64,74 @@
             </div>
             <div class="content">
                 <p class="title">삭제하면 다시 복수할 수 없습니다.<br />정말 삭제하시겠습니까?</p>
-                <div class="btn_group">
-                    <button type="button" class="button btn_black">확인</button>
-                </div>
+                <form action="">
+                    <div class="btn_group">
+                        <button type="button" class="button btn_black">확인</button>
+                    </div>
+                </form>
             </div>
+        </div>
+    </div>
+
+    <!-- 댓글수정 -->
+    <div class="layer layer_modify is-hidden">
+        <div class="inner">
+            <div class="head">
+                <p class="title">댓글수정</p>
+                <button type="button" class="btn_close" aria-label="닫기" onclick="layerClose('.layer_modify')"></button>
+            </div>
+            <form class="content">
+                <textarea class="inquire_content basic" placeholder="너무 멋진 두레입니다! 공유할게요 :)"></textarea>
+                <div class="btn_group">
+                    <button type="button" class="button btn_white">취소</button>
+                    <button type="submit" class="button btn_black">완료</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 신고하기 -->
+    <div class="layer layer_report is-hidden">
+        <div class="inner">
+            <div class="head">
+                <p class="title">신고하기</p>
+                <button type="button" class="btn_close" aria-label="닫기" onclick="layerClose('.layer_report')"></button>
+            </div>
+            <form class="content">
+                <div class="select_box">
+                    <input type="hidden" />
+                    <!-- select가 팝업에서 쓰일 땐 data-initial을 넣어주세요. --> 
+                    <button type="button" class="select_btn" data-initial="신고사유를 선택해주세요">신고사유를 선택해주세요</button>
+                    <div class="list_wrap">
+                        <span>신고사유를 선택해주세요</span>
+                        <ul class="list">
+                            <li>
+                                <button type="button" class="item" data-value="1">서비스</button>
+                            </li>
+                            <li>
+                                <button type="button" class="item" data-value="2">이벤트</button>
+                            </li>
+                            <li>
+                                <button type="button" class="item" data-value="3">프로젝트</button>
+                            </li>
+                            <li>
+                                <button type="button" class="item" data-value="4">계정관리</button>
+                            </li>
+                            <li>
+                                <button type="button" class="item" data-value="5">신고</button>
+                            </li>
+                            <li>
+                                <button type="button" class="item" data-value="6">기타</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <textarea class="inquire_content basic" placeholder="신고합니다!! :("></textarea>
+                <div class="btn_group">
+                    <button type="button" class="button btn_white">취소</button>
+                    <button type="submit" class="button btn_black">신고하기 </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

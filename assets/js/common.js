@@ -44,8 +44,34 @@ function bannerSlide() {
 // 		arrows: false,
 // 	});
 // }
-
-// 관심분야선택
+// 마이페이지 알림설정
+function mypageNotice() {
+	var all = $('#All');
+	var choiceOne = $('.choice');
+	all.on('click', function(){
+		var checked = $(this).prop('checked');
+		if($(this).is(':checked')){
+			choiceOne.prop('checked', checked);
+			choice.prop('checked','');
+		} else {
+			choiceOne.prop('checked','');
+		}
+	});
+	choiceOne.change(function(){
+		var checkedLength = $('input.choice:checked').length;
+		var choiceAll = (checkedLength == 3);
+		all.prop('checked', choiceAll);
+	});
+}
+// 마이페이지 이미지 팝업
+function mypageImagePopup() {
+	$(document).on('click', '.mypage__inquire .image button', function(){
+		var src = $(this).children('img').attr('src');
+		$('.layer_mypage_image img').attr('src', src);
+		layerOpen('.layer_mypage_image');
+	});
+} 
+// 관심분야선택 (2개 이상)
 function interestSelect(num) {
 	$(document).on('click', '.interest__choice button', function(){
 		if($(this).hasClass('is-selected')){
@@ -55,6 +81,13 @@ function interestSelect(num) {
 				$(this).addClass('is-selected');
 			}
 		}
+	});
+}
+// 카테고리 선택(1개)
+function categorySelect() {
+	$(document).on('click', '.interest__choice button', function(){
+		$(this).addClass('is-selected');
+		$('.interest__choice button').not($(this)).removeClass('is-selected');
 	});
 }
 // 패스워드타입변경
@@ -99,10 +132,11 @@ function select() {
 	});
 	$(document).on('click', '.select_box .item', function(){
 		var text = $(this).text();
+		var value = $(this).data('value');
 		var selectBox = $(this).closest('.select_box');
 		var selectInput = selectBox.children('input[type=hidden]');
 		var selectBtn = selectBox.children('.select_btn');
-		selectInput.val(text).trigger('change');
+		selectInput.val(value).trigger('change');
 		selectBtn.text(text);
 		selectBox.removeClass('is-active');
 	});
@@ -140,14 +174,21 @@ $(document).ready(function() {
 	}
 	if( $('.mypage__inquire').length > 0 ) {
 		answerShow();
+		mypageImagePopup();
 	}
 	if( $('.select_box').length > 0 ) {
 		select();
 	}
 	if( $('.detail__head--info2').length > 0 ) {
 		viewPageLike();
-	}
+	} 
 	if( $('.layer_category').length > 0 ) {
-		interestSelect(1);
+		categorySelect();
+	}
+	if( $('.layer_slide').length > 0 ){
+		popupSlide();
+	}
+	if( $('.mypage__notice').length > 0 ){
+		mypageNotice();
 	}
 });
