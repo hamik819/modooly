@@ -21,17 +21,31 @@
             <h1 class="page__header--title">활동내역</h1>
         </div>
         <div class="mypage__tab--activity">
-            <button type="button">프로젝트</button>
-            <button type="button">댓글</button>
-            <button type="button" class="is-selected">문의</button>
+            <a href="" >프로젝트</a>
+            <a href="">댓글</a>
+            <a href="" class="is-selected">문의</a>
         </div>
         <section class="mypage__inquire">
             <div class="mypage__inquire--head"> 
                 <form>
-                    <p>전체보기</p>
+                    <div class="select_box small">
+                        <input type="hidden"  />
+                        <button type="button" class="select_btn">전체보기</button>
+                        <div class="list_wrap">
+                            <span>전체보기</span>
+                            <ul class="list">
+                                <li>
+                                    <button type="button" class="item">전체보기</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="item">종료일순</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <button type="button" class="btn_pink" onclick="layerOpen('.layer_inquire')">1:1문의하기</button>
-                </form>
-            </div>
+                </form> 
+            </div> 
             <div class="mypage__inquire--list">
                 <div class="item show">
                     <div class="list_wrap">
@@ -98,7 +112,7 @@
         </section>
     </div>
     <!-- 팝업 -->
-    <div class="layer layer_inquire is-open">
+    <div class="layer layer_inquire is-hidden">
         <div class="inner">
             <div class="head">
                 <p class="title">1:1 문의</p>
@@ -149,6 +163,14 @@
                 </div>
                 <button type="submit" class="btn_black">접수하기</button>
             </form>
+        </div>
+    </div>
+    <div class="layer layer_slide is-hidden">
+        <div class="inner">
+            <div class="head">
+                <button type="button" class="btn_close" aria-label="닫기" onclick="layerClose('.layer_inquire')"></button>
+            </div>
+            <div class="slide"></div>
         </div>
     </div>
 </div>

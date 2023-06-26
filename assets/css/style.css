@@ -719,7 +719,7 @@ section {
 .select_box.small .select_btn:after {
   top: 11px;
   width: 16px;
-  height: 16px;
+  height: 17px;
   background: url("../images/arrow_select2.png") no-repeat center/100% auto;
 }
 .select_box.small .item {
@@ -1846,10 +1846,10 @@ section {
   font-size: 15px;
   color: #5B5B5B;
 }
-.mypage__logout .btn:nth-of-type(1) {
+.mypage__logout form:nth-of-type(1) .btn {
   position: relative;
 }
-.mypage__logout .btn:nth-of-type(1):after {
+.mypage__logout form:nth-of-type(1) .btn:after {
   content: "";
   position: absolute;
   right: -12px;
@@ -1931,20 +1931,20 @@ section {
   border-bottom: 1px solid #CECECE;
   padding: 0 35px 15px;
 }
-.mypage__tab button {
+.mypage__tab a {
   color: #939393;
   font-size: 15px;
   font-weight: 700;
   position: relative;
   margin-right: 36px;
 }
-.mypage__tab button:last-of-type {
+.mypage__tab a:last-of-type {
   margin-right: 0;
 }
-.mypage__tab button.is-selected {
+.mypage__tab a.is-selected {
   color: #0C0C0C;
 }
-.mypage__tab button.is-selected:after {
+.mypage__tab a.is-selected:after {
   content: "";
   position: absolute;
   bottom: -18px;
@@ -1956,20 +1956,20 @@ section {
 .mypage__tab--activity {
   padding: 22px 27px 6px;
 }
-.mypage__tab--activity button {
+.mypage__tab--activity a {
   color: #939393;
   font-size: 20px;
   font-weight: 700;
   position: relative;
   margin-right: 35px;
 }
-.mypage__tab--activity button:last-of-type {
+.mypage__tab--activity a:last-of-type {
   margin-right: 0;
 }
-.mypage__tab--activity button.is-selected {
+.mypage__tab--activity a.is-selected {
   color: #0C0C0C;
 }
-.mypage__tab--activity button.is-selected:after {
+.mypage__tab--activity a.is-selected:after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -2008,14 +2008,18 @@ section {
   gap: 9px;
   margin-bottom: 33px;
 }
-.mypage__project--tab button {
+.mypage__project--tab a {
   border: 1px solid #000000;
   border-radius: 28px;
   font-weight: 700;
   padding: 8px 20px;
   font-size: 14px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.mypage__project--tab button.is-selected {
+.mypage__project--tab a.is-selected {
   border: none;
   background: #0C0C0C;
   color: #FFFFFF;
@@ -2060,6 +2064,13 @@ section {
   flex-direction: column;
   gap: 10px;
 }
+.mypage__comment div a {
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 5px;
+  line-height: 25px;
+  padding: 0px 10px;
+}
 .mypage__comment div button {
   font-weight: 700;
   font-size: 12px;
@@ -2089,6 +2100,10 @@ section {
 .mypage__inquire--head .btn_pink {
   width: 132px;
   height: 41px;
+}
+.mypage__inquire--head .select_box.small {
+  width: 110px;
+  margin-top: 0;
 }
 .mypage__inquire--list .item {
   padding: 21px 0;
