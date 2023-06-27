@@ -292,7 +292,7 @@ section{
             border-radius: 7px;
             font-size: 14px;
             color: #5B5B5B;
-            &.is-seleted{
+            &.is-selected{
                 background: #F366B4;
                 color: #FFFFFF;
             }
@@ -313,6 +313,29 @@ section{
         position: absolute;
         top: 35px;
         right: 14px;
+    }
+    &.age{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        font-size: 14px;
+        color: #5B5B5B;
+        .select_box{
+            width: 70%;
+        }
+        .age{
+            border: 1px solid #CECECE;
+            border-radius: 7px;
+            padding: 11px 12px;
+            margin-bottom: 7px;
+            line-height: normal;
+            text-align: right;
+            width: 30%;
+            span{
+                margin-right: 5px;
+            }
+        }
     }
 }
 .text_box{

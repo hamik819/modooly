@@ -63,7 +63,7 @@
                     <label for="">연락처</label>
                     <input type="text" placeholder="">
                 </div>
-                <div class="box">
+                <div class="box age">
                     <p class="title">나이</p>
                     <div class="select_box">
                         <input type="hidden" />
@@ -86,12 +86,14 @@
                             </ul>
                         </div>
                     </div>
+                    <p class="age"><span>100</span>세</p>
                 </div>
                 <div class="box required">
                     <label for="">성별</label>
-                    <div class="btn_wrap">
-                        <button type="button">남</button>
-                        <button type="button" class="is-seleted">여</button>
+                    <div class="btn_wrap btn_select">
+                        <input type="hidden" />
+                        <button type="button" data-value="1" class="is-selected">남</button>
+                        <button type="button" data-value="2">여</button>
                     </div>
                 </div>
                 <div class="box">

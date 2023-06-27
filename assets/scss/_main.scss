@@ -180,7 +180,7 @@
                 background-size: 100% auto;
                 background-image: url('../images/icon_heart.png');
             }
-            &.is-seleted{
+            &.is-selected{
                 &:before{
                     background-image: url('../images/icon_heart_full.png');
                 }
@@ -367,7 +367,7 @@
                         background-image: url('../images/project_icon_heart.png');
                     }
                 }
-                &.is-seleted{
+                &.is-selected{
                     span{
                         &:before{
                             background-image: url('../images/project_icon_heart_full.png');

@@ -44,6 +44,13 @@ function bannerSlide() {
 // 		arrows: false,
 // 	});
 // }
+// 버튼 선택
+function buttonSelect() {
+	$(document).on('click', '.btn_select button', function(){
+		var value = $(this).data('value');
+		$(this).addClass('is-selected').siblings().removeClass('is-selected').closest('input').val(value);
+	});
+}
 // 마이페이지 알림설정
 function mypageNotice() {
 	var all = $('#All');
@@ -190,5 +197,8 @@ $(document).ready(function() {
 	}
 	if( $('.mypage__notice').length > 0 ){
 		mypageNotice();
+	}
+	if( $('.btn_select').length > 0 ){
+		buttonSelect();
 	}
 });

@@ -540,7 +540,7 @@ section {
   font-size: 14px;
   color: #5B5B5B;
 }
-.box .btn_wrap button.is-seleted {
+.box .btn_wrap button.is-selected {
   background: #F366B4;
   color: #FFFFFF;
 }
@@ -557,6 +557,29 @@ section {
   position: absolute;
   top: 35px;
   right: 14px;
+}
+.box.age {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 14px;
+  color: #5B5B5B;
+}
+.box.age .select_box {
+  width: 70%;
+}
+.box.age .age {
+  border: 1px solid #CECECE;
+  border-radius: 7px;
+  padding: 11px 12px;
+  margin-bottom: 7px;
+  line-height: normal;
+  text-align: right;
+  width: 30%;
+}
+.box.age .age span {
+  margin-right: 5px;
 }
 
 .text_box {
@@ -1405,7 +1428,7 @@ section {
   background-size: 100% auto;
   background-image: url("../images/icon_heart.png");
 }
-.main__info .like.is-seleted:before {
+.main__info .like.is-selected:before {
   background-image: url("../images/icon_heart_full.png");
 }
 .main__info--progress {
@@ -1589,7 +1612,7 @@ section {
   background-size: 100% auto;
   background-image: url("../images/project_icon_heart.png");
 }
-.main__project .btn_like.is-seleted span:before {
+.main__project .btn_like.is-selected span:before {
   background-image: url("../images/project_icon_heart_full.png");
 }
 .main__project .btn_detail {
